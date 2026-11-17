@@ -1,51 +1,143 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="fr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Creative Industry Watcher</title>
-  <meta name="description" content="A live dashboard of trending news across music, VFX, film & TV — categorized by what matters: emerging artists, new studios, creative tech, and more." />
+  <title>Maison Joséphine — Confitures & gelées artisanales de Paris</title>
+  <meta name="description" content="Maison Joséphine — confitures et gelées artisanales cuites au chaudron de cuivre, à partir de fruits de saison cueillis en France. (Site de démonstration.)" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛰️</text></svg>" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='88'>🍓</text></svg>" />
 </head>
 <body>
-  <header class="site-header">
+  <div class="demo-ribbon">Site de démonstration · <strong>Maison Joséphine</strong> est une marque fictive — aucune commande réelle n'est traitée.</div>
+
+  <header class="site-header" id="top">
     <div class="wrap header-inner">
-      <div class="brand">
-        <span class="brand-mark">🛰️</span>
-        <div>
-          <h1>Creative Industry Watcher</h1>
-          <p class="tagline">Trending signal across music, VFX &amp; screen — sorted by what matters.</p>
-        </div>
-      </div>
-      <div class="header-tools">
-        <div class="updated" id="updated" title="Last time the routine refreshed the feed">—</div>
-        <button class="theme-toggle" id="themeToggle" aria-label="Toggle light / dark theme">🌙</button>
-      </div>
+      <a class="brand" href="#top">
+        <span class="brand-emblem" aria-hidden="true">
+          <svg viewBox="0 0 48 48" width="40" height="40"><circle cx="24" cy="24" r="23" fill="none" stroke="currentColor" stroke-width="1.2"/><text x="24" y="31" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="22" font-style="italic" fill="currentColor">J</text></svg>
+        </span>
+        <span class="brand-name">Maison&nbsp;Joséphine<small>confitures &amp; gelées · Paris</small></span>
+      </a>
+      <nav class="main-nav">
+        <a href="#collection">La Collection</a>
+        <a href="#savoir-faire">Savoir-faire</a>
+        <a href="#histoire">Notre histoire</a>
+      </nav>
+      <button class="cart-btn" id="cartBtn" aria-label="Ouvrir le panier">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 7h12l-1 13H7L6 7z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg>
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
     </div>
   </header>
 
-  <div class="wrap controls">
-    <div class="search-box">
-      <span class="search-icon">🔍</span>
-      <input type="search" id="search" placeholder="Search headlines, sources, tags…" autocomplete="off" />
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <p class="eyebrow">Maison artisanale · depuis 1998</p>
+      <h1>La confiture,<br><em>comme un bijou.</em></h1>
+      <p class="hero-sub">Des confitures et gelées cuites au chaudron de cuivre, par petites quantités, à partir de fruits de saison cueillis dans les vergers de France.</p>
+      <div class="hero-cta">
+        <a href="#collection" class="btn btn-primary">Découvrir la collection</a>
+        <a href="#savoir-faire" class="btn btn-ghost">Notre savoir-faire</a>
+      </div>
     </div>
-    <div class="domain-filters" id="domainFilters"><!-- injected --></div>
-  </div>
+    <div class="hero-jars" id="heroJars" aria-hidden="true"></div>
+  </section>
 
-  <main class="wrap" id="board">
-    <div class="loading" id="loading">Loading the latest signal…</div>
-  </main>
+  <section class="collection" id="collection">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">La Collection</p>
+        <h2>Nos confitures &amp; gelées</h2>
+        <p class="section-lead">Seize recettes au fil des saisons. Voici celles du moment — 70&nbsp;% de fruits, sans conservateurs, en pots de 230&nbsp;g.</p>
+      </div>
+      <div class="product-grid" id="productGrid"><!-- injected --></div>
+    </div>
+  </section>
+
+  <section class="savoir-faire" id="savoir-faire">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Savoir-faire</p>
+        <h2>L'exigence du geste</h2>
+      </div>
+      <div class="values" id="values"><!-- injected --></div>
+    </div>
+  </section>
+
+  <section class="histoire" id="histoire">
+    <div class="wrap histoire-inner">
+      <div class="histoire-text">
+        <p class="eyebrow">Notre histoire</p>
+        <h2>Née d'un verger, <em>et d'une obsession</em></h2>
+        <p>Tout commence en 1998, dans la cuisine de Joséphine, où les mirabelles du jardin devenaient, chaque été, des pots que l'on s'arrachait. Vingt-cinq ans plus tard, la Maison perpétue ce même geste&nbsp;: des fruits choisis un à un, une cuisson lente au chaudron de cuivre, et rien d'autre que du fruit, du sucre de canne et un soupçon de patience.</p>
+        <p>Chaque recette est pensée comme un accord&nbsp;: un fruit, une épice, une fleur. Rien de superflu. Juste ce qu'il faut pour que la tartine du matin ait un petit air de fête.</p>
+        <p class="signature">— Joséphine &amp; l'atelier du Marais</p>
+      </div>
+      <div class="histoire-figures">
+        <div class="figure"><span class="fig-num">70%</span><span class="fig-label">de fruits en moyenne</span></div>
+        <div class="figure"><span class="fig-num">16</span><span class="fig-label">recettes de saison</span></div>
+        <div class="figure"><span class="fig-num">0</span><span class="fig-label">conservateur ni arôme</span></div>
+        <div class="figure"><span class="fig-num">1998</span><span class="fig-label">premier chaudron</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="avis">
+    <div class="wrap">
+      <div class="section-head"><p class="eyebrow">Ils en parlent</p><h2>À leur table</h2></div>
+      <div class="avis-grid" id="avisGrid"><!-- injected --></div>
+    </div>
+  </section>
+
+  <section class="newsletter">
+    <div class="wrap newsletter-inner">
+      <h2>Les primeurs, avant tout le monde</h2>
+      <p>Éditions limitées, fruits de saison et petites histoires d'atelier — une lettre par mois, pas davantage.</p>
+      <form class="newsletter-form" id="newsletterForm">
+        <input type="email" id="newsletterEmail" placeholder="votre@email.fr" required aria-label="Votre adresse e-mail" />
+        <button type="submit" class="btn btn-primary">Je m'abonne</button>
+      </form>
+      <p class="newsletter-note" id="newsletterNote" hidden></p>
+    </div>
+  </section>
 
   <footer class="site-footer">
-    <div class="wrap">
-      <p>Auto-updated by a scheduled routine. Headlines link to their original sources — all credit to the publishers.</p>
-      <p class="meta"><span id="itemCount">0</span> items · <span id="sourceCount">0</span> sources</p>
+    <div class="wrap footer-inner">
+      <div class="footer-brand">
+        <span class="brand-name">Maison Joséphine</span>
+        <p>Confitures &amp; gelées artisanales<br>12 rue des Vergers, 75004 Paris</p>
+      </div>
+      <div class="footer-cols">
+        <div><h4>Maison</h4><a href="#histoire">Notre histoire</a><a href="#savoir-faire">Savoir-faire</a><a href="#collection">La collection</a></div>
+        <div><h4>Aide</h4><a href="#">Livraison &amp; retours</a><a href="#">Nous contacter</a><a href="#">Pots consignés</a></div>
+        <div><h4>Suivre</h4><a href="#">Instagram</a><a href="#">Journal</a><a href="#">Nos points de vente</a></div>
+      </div>
+    </div>
+    <div class="wrap footer-legal">
+      <p>© 2026 Maison Joséphine — <strong>site de démonstration, marque fictive</strong>. Aucune transaction réelle.</p>
     </div>
   </footer>
+
+  <!-- Cart drawer -->
+  <div class="cart-overlay" id="cartOverlay" hidden></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-hidden="true" aria-label="Panier">
+    <div class="cart-head">
+      <h3>Votre panier</h3>
+      <button class="cart-close" id="cartClose" aria-label="Fermer le panier">&times;</button>
+    </div>
+    <div class="cart-items" id="cartItems"><!-- injected --></div>
+    <div class="cart-foot">
+      <div class="cart-total"><span>Total</span><span id="cartTotal">0,00&nbsp;€</span></div>
+      <button class="btn btn-primary btn-block" id="checkoutBtn">Passer commande</button>
+      <p class="cart-demo-note">Démonstration — aucun paiement ne sera demandé.</p>
+    </div>
+  </aside>
+
+  <div class="toast" id="toast" hidden></div>
 
   <script src="app.js"></script>
 </body>
