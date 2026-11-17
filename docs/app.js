@@ -1,5 +1,5 @@
 /* ============================================================
-   Maison Joséphine — mockup boutique (static, no backend)
+   La Confiture d'Annick — mockup boutique (static, no backend)
    Fictional brand · demo only · no real transactions
    ============================================================ */
 
@@ -9,7 +9,7 @@ const PRODUCTS = [
   { id: "myrtille",  name: "Myrtille sauvage",         fruit: "Myrtille",price: 10.5, color: "#4b3b7a", desc: "Myrtilles sauvages des Vosges, à peine sucrées." },
   { id: "figue",     name: "Figue de Solliès",         fruit: "Figue",   price: 10.9, color: "#6d2b6b", desc: "Figues noires de Solliès et zeste d'orange confit." },
   { id: "framboise", name: "Framboise & violette",     fruit: "Framboise",price: 9.9, color: "#b5316f", desc: "Framboises de Dordogne relevées d'une fleur de violette." },
-  { id: "mirabelle", name: "Mirabelle de Lorraine",    fruit: "Mirabelle",price: 8.9, color: "#d9a52b", desc: "Les mirabelles dorées du jardin de Joséphine." },
+  { id: "mirabelle", name: "Mirabelle de Lorraine",    fruit: "Mirabelle",price: 8.9, color: "#d9a52b", desc: "Les mirabelles dorées du jardin d'Annick." },
   { id: "cassis",    name: "Gelée de cassis",          fruit: "Cassis",  price: 9.9,  color: "#3a1f4d", desc: "Gelée limpide de cassis noir de Bourgogne." },
   { id: "orange",    name: "Orange amère & gingembre", fruit: "Agrume",  price: 8.5,  color: "#e67e22", desc: "Oranges amères de Séville et gingembre frais." },
 ];
@@ -41,7 +41,7 @@ function jarSVG(color, w = 92) {
     <path d="M20 27 q20 -17 40 0 q-5 -11 -20 -11 q-15 0 -20 11z" fill="#f3e9d8" stroke="#e4d7c3" stroke-width="1"/>
     <ellipse cx="40" cy="27" rx="22" ry="4.6" fill="none" stroke="${color}" stroke-width="1.4" opacity="0.55"/>
     <rect x="23" y="70" width="34" height="27" rx="2" fill="#fffdf9" stroke="#e4d7c3" stroke-width="0.8"/>
-    <text x="40" y="85" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="13" font-style="italic" fill="#5b2a43">J</text>
+    <text x="40" y="85" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="13" font-style="italic" fill="#5b2a43">A</text>
     <rect x="31" y="90" width="18" height="1.4" fill="#b0863b"/>
   </svg>`;
 }

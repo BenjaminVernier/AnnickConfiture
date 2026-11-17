@@ -1,7 +1,7 @@
-# Maison Joséphine — boutique (maquette)
+# La Confiture d'Annick — boutique (maquette)
 
 A **mockup e-commerce site** for a fictional French artisanal jam & jelly brand,
-**« Maison Joséphine »**. Aesthetic inspired by premium Parisian confiture houses;
+**« La Confiture d'Annick »**. Aesthetic inspired by premium Parisian confiture houses;
 the brand, products, prices and reviews are **invented for demonstration** — no real
 company, no real transactions.
 
@@ -28,4 +28,4 @@ Then open http://localhost:8788.
 - **Copy & sections**: all text is in [`docs/index.html`](docs/index.html).
 - **Palette & type**: CSS variables at the top of [`docs/styles.css`](docs/styles.css).
 
-> Demonstration only. “Maison Joséphine” is a fictional brand; the site processes no real orders or payments.
+> Demonstration only. “La Confiture d'Annick” is a fictional brand; the site processes no real orders or payments.
